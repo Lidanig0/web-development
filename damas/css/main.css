@@ -1,22 +1,26 @@
-#posPar {
+.tabuleiro {
+  display: inline-block;
+  width: auto !important;
+  margin: 10px auto;
+  padding: 0px;
+  border: 1px solid black;
+}
+.casa {
   font-size: 40px;
-  margin: 14px;
-  padding: 7px;
+  line-height: 72px;
+  margin: 0px;
+  padding: 9px;
   cursor: pointer;
+  display: inline-block;
+  min-width: 90px !important;
+  min-height: 90px !important;
+  text-align: center;
+}
+.casa.par {
   background-color: black;
   color: white;
-  border: 2px solid black;
-  width: 200px !important;
-  min-width: 200px !important;
 }
-#posImpar{
-  font-size: 40px;
-  margin: 14px;
-  padding: 7px;
-  cursor: pointer;
+.casa.impar {
   background-color: white;
   color: black;
-  border: 2px solid black;
-  width: 200px !important;
-  min-width: 200px !important;
 }
