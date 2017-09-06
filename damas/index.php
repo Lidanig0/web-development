@@ -9,18 +9,19 @@
   <body>
     <br>
     <div id="app" class="container center">
+      <h5>Vez do jogador: {{jogador}}, {{pontosJogador1}}: {{clicks}}</h5>
       <div class="tabuleiro">
         <div v-for="campo, i in campos">
           <div v-if="i % 2 == 0">
             <span v-for="pos, j in campo">
-              <span class="casa par" v-if="j % 2 == 0 &amp;&amp; i % 2 == 0">&nbsp;{{pos}}&nbsp;</span>
-              <span class="casa impar" v-else>&nbsp;{{pos}}&nbsp;</span>
+              <span v-on:click="getIndex(i, j, this);" class="casa par" v-if="j % 2 == 0 &amp;&amp; i % 2 == 0">&nbsp;{{pos}}&nbsp;</span>
+              <span v-on:click="clicks = 0" class="casa impar" v-else>&nbsp;{{pos}}&nbsp;</span>
             </span>
           </div>
           <div v-else>
             <span v-for="pos, j in campo">
-              <span class="casa impar" v-if="j % 2 == 0">&nbsp;{{pos}}&nbsp;</span>
-              <span class="casa par" v-else>&nbsp;{{pos}}&nbsp;</span>
+              <span v-on:click="clicks = 0;" class="casa impar" v-if="j % 2 == 0">&nbsp;{{pos}}&nbsp;</span>
+              <span v-on:click="getIndex(i, j, this);" class="casa par" v-else>&nbsp;{{pos}}&nbsp;</span>
             </span>
           </div>
         </div>
