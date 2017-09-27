@@ -1,15 +1,20 @@
+*{
+  user-select: none;
+}
+
 .tabuleiro {
   display: inline-block;
   width: auto !important;
   margin: 10px auto;
   padding: 0px;
-  border: 1px solid black;
+  border: 3px solid red;
 }
 .casa {
   font-size: 40px;
   line-height: 72px;
   margin: 0px;
-  padding: 9px;
+  padding-top: 18px;
+  padding-left: -4px;
   cursor: pointer;
   display: inline-block;
   min-width: 90px !important;
@@ -17,10 +22,14 @@
   text-align: center;
 }
 .casa.par {
-  background-color: black;
-  color: white;
+  background-color: white;
 }
 .casa.impar {
-  background-color: white;
-  color: black;
+  background-color: black;
+}
+img {
+  width: 60px;
+}
+.score {
+  font-size: 18px;
 }
